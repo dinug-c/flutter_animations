@@ -1,14 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_animations/ui/OnboardingScreen.dart';
 
-void main() => const MainApp();
+void main() {
+  runApp(const MainApp());
+}
 
 class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+  const MainApp({ Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'CodeN Flutter',
       theme: ThemeData(
         scaffoldBackgroundColor: const Color(0xFFEEF1F8),
